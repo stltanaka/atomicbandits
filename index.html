@@ -50,11 +50,13 @@
     }
 
  .triangle-menu {
+  position: absolute;
+  top: 320px;  /* distance from top of animation-wrapper */
+  left: 50px;  /* distance from left of animation-wrapper */
   width: 300px;   /* adjust width */
   height: 200px;  /* adjust height */
   background: #000000;
   margin: 40px auto;
-  position: relative;
   
   /* clip into a scalene triangle */
   clip-path: polygon(-14.00% 54.50%, -12.34% -13.5%, 132.67% 75%);
