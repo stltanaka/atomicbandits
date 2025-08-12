@@ -91,13 +91,18 @@
 </section>
   
   <script>
-    var animation = lottie.loadAnimation({
-      container: document.getElementById('animation-container'),
-      renderer: 'svg',
-      loop: false,
-      autoplay: true,
-      path: 'animation.json' // replace with actual path
-    });
+      var animation = lottie.loadAnimation({
+    container: document.getElementById('animation-container'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    path: 'animation.json'
+  });
+
+  animation.addEventListener('complete', function () {
+    // Go to the last frame and stop
+    animation.goToAndStop(animation.totalFrames - 1, true);
+  });
   </script>
 </body>
 </html>
