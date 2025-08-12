@@ -14,19 +14,22 @@
       background-color: #ffffff;
     }
 
-    #animation-container {
-      width: 100%;
-      max-width: 500px;
-      height: 500px;
-      margin: 0 auto;
-    }
-
     #animation-wrapper {
-    width: 300px; /* Final cropped area size */
-    height: 300px;
-    overflow: hidden;
+    width: 300px;       /* Final cropped width */
+    height: 200px;      /* Final cropped height */
+    overflow: hidden;   /* Crop outside bounds */
     margin: 0 auto;
     position: relative;
+    }
+
+    #animation-container {
+    position: absolute;
+    top: -50px;         /* Shift up/down to change header position */
+    left: -40px;        /* Shift left/right */
+    transform: scale(1.5); /* Scale animation (1 = original size) */
+    transform-origin: top left; /* Keeps position predictable when scaling */
+    width: 500px;       /* Keep large enough so crop works */
+    height: 500px;
     }
 
     .blog-post {
