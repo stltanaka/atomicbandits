@@ -48,6 +48,52 @@
       text-decoration: none;
       color: inherit;
     }
+
+    .triangle-menu {
+  position: relative;
+  width: 200px;
+  margin: 20px auto;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 8px;
+}
+
+/* Create downward-pointing triangle */
+.triangle-menu::after {
+  content: "";
+  position: absolute;
+  top: -20px; /* adjust distance from box */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #333;
+}
+
+.triangle-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.triangle-menu li {
+  margin: 5px 0;
+}
+
+.triangle-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.triangle-menu a:hover {
+  text-decoration: underline;
+}
+
+
     
   </style>
 </head>
@@ -57,6 +103,14 @@
     <div id="animation-container"></div>
   </div>
 </a>
+
+<div class="triangle-menu">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
   
   <section class="blog-post">
   <h1>Hey God</h1>
