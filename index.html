@@ -49,50 +49,35 @@
       color: inherit;
     }
 
-    .triangle-menu {
-  position: relative;
-  width: 200px;
-  margin: 20px auto;
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  border-radius: 8px;
-}
-
-/* Create downward-pointing triangle */
-.triangle-menu::after {
-  content: "";
-  position: absolute;
-  top: -20px; /* adjust distance from box */
-  left: 50%;
-  transform: translateX(-50%);
+  .triangle-menu {
   width: 0;
   height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid #333;
+  border-left: 150px solid transparent; /* left side */
+  border-right: 150px solid transparent; /* right side */
+  border-bottom: 150px solid #333; /* base color of triangle */
+  margin: 40px auto;
+  position: relative;
 }
 
-.triangle-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.triangle-menu li {
-  margin: 5px 0;
-}
-
+/* Place menu links inside using absolute positioning */
 .triangle-menu a {
+  position: absolute;
   color: white;
   text-decoration: none;
+  font-size: 14px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.triangle-menu a:hover {
-  text-decoration: underline;
+.triangle-menu a:nth-child(1) {
+  top: 40px;
 }
-
+.triangle-menu a:nth-child(2) {
+  top: 70px;
+}
+.triangle-menu a:nth-child(3) {
+  top: 100px;
+}
 
     
   </style>
@@ -104,13 +89,11 @@
   </div>
 </a>
 
-<div class="triangle-menu">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</div>
+  <div class="triangle-menu">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+  </div>
   
   <section class="blog-post">
   <h1>Hey God</h1>
