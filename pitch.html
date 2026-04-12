@@ -7,23 +7,24 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.1/lottie.min.js"></script>
   <style>
    
-    #animation-wrapper {
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-    margin: 0 auto;
-    position: relative;
-    }
+#animation-wrapper {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  margin: 0 auto;
 
-    #animation-container {
-    position: absolute;
-    top: -300px;      /* Shift up/down to change header position */
-    left: -150px;        /* Shift left/right */
-    transform: scale(2.25); /* Scale animation (1 = original size) */
-    transform-origin: top left; /* Keeps position predictable when scaling */
-    width: 500px;       /* Keep large enough so crop works */
-    height: 500px;
-    }
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  position: relative;
+}
+
+#animation-container {
+  transform: scale(2.25);
+  transform-origin: center center; /* important for proper scaling */
+  width: 500px;
+  height: 500px;
+}
 
    #animation-link {
       text-decoration: none;
