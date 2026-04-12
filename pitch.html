@@ -53,6 +53,27 @@
       color: inherit;
     }
 
+  .content-row {
+  display: flex;
+  align-items: flex-start; /* aligns top edges */
+  gap: 20px; /* space between image and text */
+}
+
+.content-row img {
+  max-width: 250px; /* control image size */
+  height: auto;
+}
+
+.text-content {
+  flex: 1; /* lets text take remaining space */
+}
+
+@media (max-width: 600px) {
+  .content-row {
+    flex-direction: column;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -63,12 +84,16 @@
 </a>
 
 
-  <section class="blog-post">
-  <h1></h1>
-  <p>This is me.</p>
-  <img src="Jim.png" alt="A description of the image" style="max-width: 100%; height: auto; margin: 20px 0;">
-  <p>My favorite anime is 夏目友人帳.</p>
-  </section>
+<section class="blog-post">
+  <div class="content-row">
+    <img src="Jim.png" alt="A description of the image">
+    
+    <div class="text-content">
+      <h1></h1>
+      <p>This is me.</p>
+    </div>
+  </div>
+</section>
     
   <script>
       var animation = lottie.loadAnimation({
